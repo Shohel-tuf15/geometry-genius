@@ -45,3 +45,26 @@ function calculateRectangleArea() {
   const rectangleAreaDisplay = document.getElementById("rectangle-area");
   rectangleAreaDisplay.innerText = rectangleArea;
 }
+
+// function Parallelogram area calculation
+
+function ParallelogramArea() {
+  const base = inputFieldByID("parallelogram-base");
+
+  const height = inputFieldByID("parallelogram-height");
+
+  const area = base * height;
+  setAreaByID("parallelogram-area", area);
+}
+
+function inputFieldByID(elementID) {
+  const inputField = document.getElementById(elementID);
+  const inputFieldText = inputField.value;
+  const inputValue = parseFloat(inputFieldText);
+  return inputValue;
+}
+
+function setAreaByID(elementID, area) {
+  const setArea = document.getElementById(elementID);
+  setArea.innerText = area;
+}
